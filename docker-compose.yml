@@ -2,17 +2,15 @@ version: "3"
 
 services:
   front-end:
-    build: ./front-end/
+    build: front-end/
     ports:
-      - "8080:80"
+      - "3000:3000"
     environment:
       - RABBITMQ_USER=${USER}
       - RABBITMQ_PASS=${PASS}
     # uncomment for development
     volumes:
       - "./front-end/app:/var/www/html"
-  back-end:
-  db:
-  messaging:
-
-
+  # back-end:
+  # db:
+  # messaging:

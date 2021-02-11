@@ -1,3 +1,7 @@
-FROM php:7.4.5-apache
-RUN docker-php-ext-install bcmath sockets
-COPY app/ /var/www/html/
+FROM node:14
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+EXPOSE 3000
+CMD ["npm","start"]
