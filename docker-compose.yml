@@ -11,15 +11,15 @@ services:
     # uncomment for development
     volumes:
       - "./front-end/app:/var/www/html"
-  messaging:
-    image: rabbitmq
-    environment:
-      - RABBITMQ_DEFAULT_USER=${USER}
-      - RABBITMQ_DEFAULT_PASS=${PASS}
+#  messaging:
+#    image: rabbitmq
+#    environment:
+#      - RABBITMQ_DEFAULT_USER=${USER}
+#      - RABBITMQ_DEFAULT_PASS=${PASS}
 #  back-end:
 #    build: back-end/
 #    environment:
 #      - RABBITMQ_DEFAULT_USER=${USER}
 #      - RABBITMQ_DEFAULT_PASS=${PASS}
-# Can uncomment backend section once the rest of the backend code is done
+# Can uncomment messaging and backend section once the rest of the backend code is done
   # db:
