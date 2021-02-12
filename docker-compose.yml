@@ -11,6 +11,14 @@ services:
     # uncomment for development
     volumes:
       - "./front-end/app:/var/www/html"
-  # back-end:
+  messaging:
+    image: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=${USER}
+      - RABBITMQ_DEFAULT_PASS=${PASS}
+#  back-end:
+#    build: back-end/
+#    environment:
+#      - RABBITMQ_DEFAULT_USER=${USER}
+#      - RABBITMQ_DEFAULT_PASS=${PASS}
   # db:
-  # messaging:
