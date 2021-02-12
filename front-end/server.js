@@ -11,11 +11,12 @@ app.get('/', (req, res) => {
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`); */
 
-var http = require('http');
-var fs = require('fs');
-var server = http.createServer((request, re) => {
+const http = require('http');
+const fs = require('fs');
+const server = http.createServer((request, re) => {
     re.writeHead(200, { 'content-type': 'text/html' });
     fs.createReadStream('app/index.html').pipe(re)
 })
 
 server.listen(process.env.PORT || 3000);
+
