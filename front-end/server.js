@@ -11,16 +11,12 @@ app.get('/', (req, res) => {
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`); */
 
-const PORT = 3000;
-const http = require("http");
-const server = http.createServer((request, response) => {
-    response.writeHead(200, {  
-        'Content-Type': 'text/plain'  
-    });  
-    response.write("Hello World");  
-    response.end();  
-});
+const http = require('http');
+const fs = require('fs');
+const server = http.createServer((request, re) => {
+    re.writeHead(200, { 'content-type': 'text/html' });
+    fs.createReadStream('app/index.html').pipe(re)
+})
 
-server.listen(PORT);
+server.listen(process.env.PORT || 3000);
 
-console.log(`Running on http://localhost:${PORT}`);
