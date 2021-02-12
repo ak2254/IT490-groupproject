@@ -9,14 +9,13 @@ services:
       - RABBITMQ_USER=${USER}
       - RABBITMQ_PASS=${PASS}
     # uncomment for development
-    volumes:
-      "./front-end/app:/var/www/html"
+
   messaging:
-   image: rabbitmq
+   image: rabbitmq:3.8-management
    environment:
       - RABBITMQ_DEFAULT_USER=${USER}
-     - RABBITMQ_DEFAULT_PASS=${PASS}
- back-end:
+      - RABBITMQ_DEFAULT_PASS=${PASS}
+  back-end:
     build: back-end/
     environment:
       - MSG_USER=${USER}
