@@ -25,9 +25,9 @@ services:
     image: postgres
     restart: always
     environment:
-#      POSTGRES_DB: cocktails
-#      POSTGRES_USER: cocktails
-      POSTGRES_PASSWORD: cocktails
+      POSTGRES_DB: foods
+      POSTGRES_USER: ${POSTGRES_USER_E}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD_E}
 
   adminer:
     image: adminer
