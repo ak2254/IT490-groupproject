@@ -13,8 +13,10 @@ services:
   messaging:
    image: rabbitmq:3.8-management
    environment:
-      - RABBITMQ_DEFAULT_USER=${USER}
-      - RABBITMQ_DEFAULT_PASS=${PASS}
+      - RABBITMQ_DEFAULT_USER=${RMQ_USER_E}
+      - RABBITMQ_DEFAULT_PASS=${RMQ_PASSWORD_E}
+   ports:
+     - "15672:15672"
   back-end:
     build: back-end/
     environment:
