@@ -22,7 +22,7 @@ services:
       - MSG_PASS=${PASS}
 # Can uncomment messaging and backend section once the rest of the backend code is done
   db:
-    image:prostgres
+    image: postgres
     restart: always
     environment:
 #      POSTGRES_DB: cocktails
