@@ -29,9 +29,7 @@ services:
     restart: always
     ports:
       - 8080:8080
-
-
-
+      
   db:
     image: postgres
     restart: always
@@ -43,5 +41,5 @@ services:
       - ./db:/docker-entrypoint-initdb.d
       - .db-data:/var/lib/postgressql/data
 
-
-
+volumes:
+  db-data:
