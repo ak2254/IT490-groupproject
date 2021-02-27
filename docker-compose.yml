@@ -23,22 +23,14 @@ services:
       - MSG_USER=${USER}
       - MSG_PASS=${PASS}
 # Can uncomment messaging and backend section once the rest of the backend code is done
-<<<<<<< HEAD
-=======
-  db:
-    image: postgres
-    restart: always
-    environment:
-      POSTGRES_DB: foods
-      POSTGRES_USER: ${POSTGRES_USER_E}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD_E}
->>>>>>> 28a7c74 (#11 - use username and password from env)
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+
+
 
   db:
     image: postgres
@@ -50,3 +42,6 @@ services:
     volumes:
       - ./db:/docker-entrypoint-initdb.d
       - .db-data:/var/lib/postgressql/data
+
+
+
