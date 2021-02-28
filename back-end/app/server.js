@@ -50,7 +50,15 @@ amqp.connect(messaging_url, function(error0, connection) {
 
       // Read and write to db
 
+      var action = received_json['action'];
 
+      switch(action){
+        case 'getUser':
+
+
+
+
+      }
       const getUser = (request, response) => {
         const id = parseInt(request.params.id)
 
@@ -64,9 +72,9 @@ amqp.connect(messaging_url, function(error0, connection) {
       }
 
       const createUser = (request, response) => {
-        const { name, email } = request.body
+        const { uid, name, password } = request.body
 
-        db_pool.query('INSERT INTO users (name, email) VALUES ($1, $2)', [name, email], (err, res) => {
+        db_pool.query('INSERT INTO users (uid, name, password) VALUES ($1, $2, $3)', [uid, name, password], (err, res) => {
           if (err) {
             throw err
           }
