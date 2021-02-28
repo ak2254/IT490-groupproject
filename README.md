@@ -37,5 +37,14 @@ The application will also store the data on if the user has visited the restaura
 
 <h3>Front-end:</h3>
 <h3>Back-end:</h3>
+<h4>Written in: NodeJS (JavaScript) - rabbitmq library</h4>
+
+**Goals of the Back End:**
+<ul><li>Handle authentication</li>
+<li>Scrape information from the web </li>
+
+</ul>
+
+
 <h3>Database:</h3>
 <h3>Messaging:</h3>
