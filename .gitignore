@@ -2,6 +2,8 @@ node_modules
 
 ./front-end/node_modules
 
+./back-end/app/node_modules
+
 .idea
 
 .env
