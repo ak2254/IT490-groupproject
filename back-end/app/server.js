@@ -4,8 +4,8 @@ const https = require('https');
 
 // Messaging configuration
 const messaging_host = 'messaging';
-const messaging_user = 'Group1';
-const messaging_pass = 'Password';
+const messaging_user = process.env.MSG_USER;
+const messaging_pass = process.env.MSG_PASS;
 const queue = 'requests';
 const messaging_url = `amqp://${messaging_user}:${messaging_pass}@${messaging_host}`;
 const amqp = require('amqplib/callback_api');
@@ -54,33 +54,32 @@ amqp.connect(messaging_url, function(error0, connection) {
 
       switch(action){
         case 'getUser':
+          const getUser = (request, response) => {
+            const id = parseInt(request.params.id)
 
-
-
-
-      }
-      const getUser = (request, response) => {
-        const id = parseInt(request.params.id)
-
-        db_pool.query('SELECT * FROM users WHERE id = $1', [id], (err, res) => {
-          if (err) {
-            throw err
+            db_pool.query('SELECT * FROM users WHERE id = $1', [id], (err, res) => {
+              if (err) {
+                throw err
+              }
+              response.status(200).json(res.rows);
+              db_pool.end();
+            })
           }
-          response.status(200).json(res.rows);
-          db_pool.end();
-        })
-      }
+          break;
+        case 'createUser':
+          const createUser = (request, response) => {
+            const { uid, name, password } = request.body
 
-      const createUser = (request, response) => {
-        const { uid, name, password } = request.body
-
-        db_pool.query('INSERT INTO users (uid, name, password) VALUES ($1, $2, $3)', [uid, name, password], (err, res) => {
-          if (err) {
-            throw err
+            db_pool.query('INSERT INTO users (uid, name, password) VALUES ($1, $2, $3)', [uid, name, password], (err, res) => {
+              if (err) {
+                throw err
+              }
+              response.status(201).send(`User added with ID: ${res.insertId}`)
+            })
           }
-          response.status(201).send(`User added with ID: ${res.insertId}`)
-        })
+          break;
       }
+
 
 
     });

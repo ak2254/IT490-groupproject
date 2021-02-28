@@ -6,8 +6,8 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - RABBITMQ_USER=${USER}
-      - RABBITMQ_PASS=${PASS}
+      - RABBITMQ_USER=${RABBITMQ_USER}
+      - RABBITMQ_PASS=${RABBITMQ_PASS}
     # uncomment for development
 
   messaging:
@@ -20,8 +20,8 @@ services:
   back-end:
     build: back-end/
     environment:
-      - MSG_USER=${USER}
-      - MSG_PASS=${PASS}
+      - MSG_USER=${MSG_USER}
+      - MSG_PASS=${MSG_PASS}
   # Can uncomment messaging and backend section once the rest of the backend code is done
 
   adminer:
