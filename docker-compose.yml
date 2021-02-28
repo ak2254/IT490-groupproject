@@ -11,25 +11,25 @@ services:
     # uncomment for development
 
   messaging:
-   image: rabbitmq:3.8-management
-   environment:
+    image: rabbitmq:3.8-management
+    environment:
       - RABBITMQ_DEFAULT_USER=${RMQ_USER_E}
       - RABBITMQ_DEFAULT_PASS=${RMQ_PASSWORD_E}
-   ports:
-     - "15672:15672"
+    ports:
+      - "15672:15672"
   back-end:
     build: back-end/
     environment:
       - MSG_USER=${USER}
       - MSG_PASS=${PASS}
-# Can uncomment messaging and backend section once the rest of the backend code is done
+  # Can uncomment messaging and backend section once the rest of the backend code is done
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
-      
+
   db:
     image: postgres
     restart: always
