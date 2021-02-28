@@ -25,26 +25,35 @@ The application will also store the data on if the user has visited the restaura
 
 
 </ul>
-```
-**GROUP MEMBER**  
-<ul> <li> Anjali Kumari</li>
-<li>Thomas Semiz</li>
-<li>Krishna Bhagat</li>
-<li>Steven Rodrigues</li>
 
-</ul>
-```
+**GROUP MEMBER**  
+    <ul>
+    <li> Anjali Kumari</li>
+    <li>Thomas Semiz</li>
+    <li>Krishna Bhagat</li>
+    <li>Steven Rodrigues</li>
+     </ul> 
+    
+   
+    
+
+
+
+
 
 <h3>Front-end:</h3>
 <h3>Back-end:</h3>
 <h4>Written in: NodeJS (JavaScript) - rabbitmq library</h4>
-
+````
 
 **Goals of the Back End:**
-<ul><li>Handle authentication</li>
-<li>Scrape information from the web </li>
+   <ul><li>Handle authentication</li>
+   <li>Scrape information from the web </li>
+   
+   </ul>
+   
+````
 
-</ul>
 
 
 <h3>Database:</h3>
