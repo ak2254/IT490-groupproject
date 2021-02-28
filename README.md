@@ -25,7 +25,7 @@ The application will also store the data on if the user has visited the restaura
 
 
 </ul>
-
+```
 **GROUP MEMBER**  
 <ul> <li> Anjali Kumari</li>
 <li>Thomas Semiz</li>
@@ -33,14 +33,12 @@ The application will also store the data on if the user has visited the restaura
 <li>Steven Rodrigues</li>
 
 </ul>
-
+```
 
 <h3>Front-end:</h3>
-
-<div style="background: '#f6f8fa;'" >
 <h3>Back-end:</h3>
 <h4>Written in: NodeJS (JavaScript) - rabbitmq library</h4>
-</div>
+
 
 **Goals of the Back End:**
 <ul><li>Handle authentication</li>
