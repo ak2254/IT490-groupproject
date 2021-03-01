@@ -90,7 +90,7 @@ The application will also store the data on if the user has visited the restaura
    
    <h2> Getting the App to run on the local machine:</h2>
    
-   <ul> <li> pre Requirenment: Docker </li>
+   <ul> <li> Pre Requirenment: Docker </li>
    <li>Clone Project: git clone https://github.com/ak2254/IT490-groupproject.git </li>
    <li> run comand: docker compose Build</li>
    <li> run comand: docker-compose up to have the project running</li>
