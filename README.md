@@ -39,9 +39,10 @@ The application will also store the data on if the user has visited the restaura
 
 
 
-<h2> Overall concept of how the App works </h2>
+<h2> Overall Concept Of How The App Works </h2>
 
 <h3>Front-end:</h3>
+<h4>Port:3000</h4>
 <p>Node Js is utilized to present the all the html pages as per the content being present to the user </p>
 
 
@@ -68,6 +69,7 @@ The application will also store the data on if the user has visited the restaura
 
 <h3>Database:</h3>
 <h4>Postgres</h4>
+<h3> port: 8080 </h3>
 <li>Utilized to store user authentication data as well as the user's personalized data</li>
 
 <h3>Messaging:</h3>
@@ -85,3 +87,14 @@ The application will also store the data on if the user has visited the restaura
    <li>database and backend works together making the overall app component connected to each other.</li>
    
    </ul>
+   
+   <h2> Getting the App to run on the local machine:</h2>
+   
+   <ul> <li> pre Requirenment: Docker </li>
+   <li>Clone Project: git clone https://github.com/ak2254/IT490-groupproject.git </li>
+   <li> run comand: docker compose Build</li>
+   <li> run comand: docker-compose up to have the project running</li>
+      
+   
+   </ul>
+   
