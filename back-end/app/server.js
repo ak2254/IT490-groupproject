@@ -57,7 +57,7 @@ amqp.connect(messaging_url, function(error0, connection) {
           const getUser = (request, response) => {
             const id = parseInt(request.params.id)
 
-            db_pool.query('SELECT * FROM users WHERE id = $1', [id], (err, res) => {
+            db_pool.query('SELECT * FROM userdata WHERE uid = $1', [id], (err, res) => {
               if (err) {
                 throw err
               }
@@ -70,7 +70,7 @@ amqp.connect(messaging_url, function(error0, connection) {
           const createUser = (request, response) => {
             const { uid, name, password } = request.body
 
-            db_pool.query('INSERT INTO users (uid, name, password) VALUES ($1, $2, $3)', [uid, name, password], (err, res) => {
+            db_pool.query('INSERT INTO userdata (uid, Username, password) VALUES ($1, $2, $3)', [uid, name, password], (err, res) => {
               if (err) {
                 throw err
               }
@@ -78,10 +78,13 @@ amqp.connect(messaging_url, function(error0, connection) {
             })
           }
           break;
+        default:
+          console.log('Unknown action');
+          send_response(channel, msg, {'status': 'ERROR', 'message': 'Unknown action'});
+          break;
+
+
       }
-
-
-
     });
   });
 });

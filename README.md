@@ -39,20 +39,49 @@ The application will also store the data on if the user has visited the restaura
 
 
 
-
+<h2> Overall concept of how the App works </h2>
 
 <h3>Front-end:</h3>
+<p>Node Js is utilized to present the all the html pages as per the content being present to the user </p>
+
+
 <h3>Back-end:</h3>
 <h4>Written in: NodeJS (JavaScript) - rabbitmq library</h4>
 
 **Goals of the Back End:**
-     <ul><li>Handle authentication</li>
-     <li>Scrape information from the web </li>
-     </ul>
+     <ul><li>Handles authentication</li>
+     <li>Scrape information from the web: 
+     <ul><li> connects to the rest api
+     </li>
+     
+           
+ </ul>
+     </li>
+      <li>Retrieve data from the database </li>
+      
+   </ul>
+     
 
 
 
 
 
 <h3>Database:</h3>
+<h4>Postgres</h4>
+<li>Utilized to store user authentication data as well as the user's personalized data</li>
+
 <h3>Messaging:</h3>
+<h4>RabbitMQ</h4>
+<p>RabbitMQ is mainly utilized to allow components to use a common medium to exchange information
+</p>
+<ul><li>Run command docker compose up </li>
+<li>once everything is up and running utilize localhost:15672 to acress the Front-end UI for RabbitMQ</li>
+<li>logging into the rabbitMQ will provide overview detail on the queues sent through backend</li>
+</ul>
+
+<h3>App Structure</h3>
+   <ul><li> Front-end and Messaging works back and forth as per sending and receiving data/request</li> 
+   <li>likewise messaging and backend works back and forth</li>
+   <li>database and backend works together making the overall app component connected to each other.</li>
+   
+   </ul>
