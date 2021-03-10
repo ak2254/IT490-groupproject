@@ -77,7 +77,7 @@ float: left;
 </style>
 <body>
 
-<form action="/action_page.php" style="border:1px solid #ccc"> <!-- Change the action_page.php to the desired redirect-->
+<form action="/register" method="POST" style="border:1px solid #ccc">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
@@ -94,7 +94,8 @@ float: left;
 
     <div class="clearfix">
       <button type="submit" class="signupbtn">Sign Up</button>
-      <button type="button" onclick="location.href = 'index.html'"; class="cancelbtn">Cancel</button>
+      <a href="login.html" class="cancelbtn">Cancel</a>
+<!--      <button type="button" onclick="location.href = 'index.html'"; class="cancelbtn">Cancel</button>-->
     </div>
   </div>
 </form>
