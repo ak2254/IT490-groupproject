@@ -43,11 +43,11 @@ The application will also store the data on if the user has visited the restaura
 
 <h3>Front-end:</h3>
 <h4>Port:3000</h4>
-<p>Node Js is utilized to present the all the html pages as per the content being present to the user </p>
+<p>Python (Flask) is utilized to present the all the html pages as per the content being present to the user </p>
 
 
 <h3>Back-end:</h3>
-<h4>Written in: NodeJS (JavaScript) - rabbitmq library</h4>
+<h4>Written in: Python - rabbitmq library</h4>
 
 **Goals of the Back End:**
      <ul><li>Handles authentication</li>
