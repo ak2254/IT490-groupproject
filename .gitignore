@@ -1,6 +1,6 @@
 node_modules
 
-./front-end/node_modules
+front-end-bk/node_modules
 
 ./back-end/app/node_modules
 
