@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, session, redirect
 from functools import wraps
-from werkzeug.security import check_password_hash, generate_password_hash
+# from werkzeug.security import check_password_hash, generate_password_hash, gen_salt
+import werkzeug
 import logging
 import messaging
 import os
@@ -43,7 +44,7 @@ def register():
             'REGISTER',
             {
                 'email': email,
-                'hash': generate_password_hash(password)
+                'hash': werkzeug.security.generate_password_hash(password)
             }
         )
         response = msg.receive()
@@ -66,7 +67,7 @@ def login():
         response = msg.receive()
         if response['success'] != True:
             return "Login failed."
-        if check_password_hash(response['hash'], password):
+        if werkzeug.security.check_password_hash(response['hash'], password):
             session['email'] = email
             return redirect('/')
         else:
