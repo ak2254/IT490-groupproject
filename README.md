@@ -44,7 +44,7 @@ The application will also store the data on if the user has visited the restaura
 <h3>Front-end:</h3>
 <h4>Port:3000</h4>
 <p>Python (Flask) is utilized to present the html pages as per the content being present to the user. </p>
-<p> The goal is to interacts with the user via HTTP and communicates with Messaging via a messaging library. /p>
+<p> The goal is to interact with the user via HTTP and communicate with Messaging via a messaging library. /p>
 
 <h3>Back-end:</h3>
 <h4>Written in: Python - rabbitmq library</h4>
