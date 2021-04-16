@@ -43,8 +43,8 @@ The application will also store the data on if the user has visited the restaura
 
 <h3>Front-end:</h3>
 <h4>Port:3000</h4>
-<p>Python (Flask) is utilized to present the all the html pages as per the content being present to the user </p>
-
+<li>Python (Flask) is utilized to present the html pages as per the content being present to the user. </li>
+<li> The goal is to interact with the user via HTTP and communicate with Messaging via a messaging library. </li>
 
 <h3>Back-end:</h3>
 <h4>Written in: Python - rabbitmq library</h4>
@@ -52,13 +52,13 @@ The application will also store the data on if the user has visited the restaura
 **Goals of the Back End:**
      <ul><li>Handles authentication</li>
      <li>Scrape information from the web: 
-     <ul><li> connects to the rest api
+     <ul><li> Connects to the rest api
      </li>
      
            
  </ul>
      </li>
-      <li>Retrieve data from the database </li>
+      <li>Retrieve and stores data to and from the database </li>
       
    </ul>
      
@@ -77,14 +77,14 @@ The application will also store the data on if the user has visited the restaura
 <p>RabbitMQ is mainly utilized to allow components to use a common medium to exchange information
 </p>
 <ul><li>Run command docker compose up </li>
-<li>once everything is up and running utilize localhost:15672 to acress the Front-end UI for RabbitMQ</li>
-<li>logging into the rabbitMQ will provide overview detail on the queues sent through backend</li>
+<li>Once everything is up and running utilize localhost:15672 to acress the Front-end UI for RabbitMQ</li>
+<li>Logging into the rabbitMQ will provide a detailed overview on the queues sent between the frontend and backend</li>
 </ul>
 
 <h3>App Structure</h3>
    <ul><li> Front-end and Messaging works back and forth as per sending and receiving data/request</li> 
-   <li>likewise messaging and backend works back and forth</li>
-   <li>database and backend works together making the overall app component connected to each other.</li>
+   <li>Likewise messaging and backend works back and forth</li>
+   <li>Database and backend works together making the overall app component connected to each other.</li>
    
    </ul>
    
@@ -92,8 +92,8 @@ The application will also store the data on if the user has visited the restaura
    
    <ul> <li> Pre Requirenment: Docker </li>
    <li>Clone Project: git clone https://github.com/ak2254/IT490-groupproject.git </li>
-   <li> run comand: docker compose Build</li>
-   <li> run comand: docker-compose up to have the project running</li>
+   <li> Run comand: docker compose Build</li>
+   <li> Run comand: docker-compose up to have the project running</li>
       
    
    </ul>
